@@ -1,11 +1,11 @@
 :root {
   --color-primary: #faedf7;
   --color-primary-strong: #f3d7ea;
-  --color-accent: #6d4c63;
+  --color-accent: #E330B7;
   --color-accent-soft: #b68ba7;
   --color-bg: #fff8fc;
   --color-surface: #ffffff;
-  --color-text: #3d2a35;
+  --color-text: #6f5b67;
   --color-text-soft: #6f5b67;
   --color-border: rgba(109, 76, 99, 0.18);
   --color-shadow: rgba(109, 76, 99, 0.14);
@@ -15,6 +15,13 @@
   --radius-lg: 2rem;
   --container-width: 1120px;
   --transition: 180ms ease;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,
@@ -29,7 +36,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   color: var(--color-text);
   background:
     radial-gradient(circle at top, rgba(250, 237, 247, 0.95), rgba(255, 248, 252, 0.88)),
@@ -141,6 +148,7 @@ main {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
 }
 
 .hero h1,
@@ -149,6 +157,7 @@ main {
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--color-accent);
+  font-family: "Nunito", sans-serif;
 }
 
 .hero h1 {
@@ -156,11 +165,11 @@ main {
   font-size: clamp(2.5rem, 6vw, 4.75rem);
 }
 
-.hero p:not(.eyebrow) {
-  max-width: 44rem;
-  margin: 1.25rem 0 0;
-  font-size: 1.1rem;
-  color: var(--color-text-soft);
+.hero p:not(.eyebrow),
+.card p,
+.menu-item p,
+.site-footer {
+  font-family: "Pacifico", cursive;
 }
 
 .section-title {
@@ -261,6 +270,7 @@ main {
   margin: 0 0 0.7rem;
   font-size: 1.2rem;
   color: var(--color-accent);
+  font-family: "Nunito", sans-serif;
 }
 
 .card p,
@@ -300,13 +310,27 @@ main {
 
 .gallery-card {
   cursor: pointer;
+  position: relative;
 }
 
 .gallery-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
   background: linear-gradient(135deg, #faedf7, #e9d7e3);
+}
+
+.gallery-card__caption {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: rgba(45, 29, 40, 0.7);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
 }
 
 .site-footer {

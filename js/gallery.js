@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     lightboxImage.src = fullImageSource;
     lightboxImage.alt = caption;
     lightboxCaption.textContent = caption;
-    lightbox.classList.add('is-active');
+    lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
-    lightbox.classList.remove('is-active');
+    lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     lightboxImage.src = '';
     lightboxImage.alt = '';
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && lightbox.classList.contains('is-active')) {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
       closeLightbox();
     }
   });

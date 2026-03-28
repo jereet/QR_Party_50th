@@ -1,0 +1,54 @@
+@mixin container {
+  width: min(100% - 2rem, $container-width);
+  margin-inline: auto;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin section-spacing {
+  padding-block: 4rem;
+
+  @include respond-to(md) {
+    padding-block: 5.5rem;
+  }
+}
+
+@mixin panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(250, 237, 247, 0.94) 100%);
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+@mixin interactive-lift {
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base, background-color $transition-base, color $transition-base;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba(182, 139, 167, 0.35);
+  outline-offset: 3px;
+}

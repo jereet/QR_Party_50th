@@ -1,0 +1,52 @@
+.button,
+.menu-filter__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: $radius-pill;
+  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 8%) 100%);
+  color: $color-white;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: $shadow-sm;
+  transition: transform $transition-fast, box-shadow $transition-fast, background-color $transition-fast, color $transition-fast, border-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+  }
+}
+
+.button--secondary,
+.menu-filter__button {
+  background: rgba(255, 255, 255, 0.78);
+  color: $color-primary-deep;
+  border-color: rgba(109, 76, 99, 0.18);
+  box-shadow: none;
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible,
+.menu-filter__button:hover,
+.menu-filter__button:focus-visible {
+  background: $color-surface-soft;
+  color: $color-primary-deep;
+  border-color: rgba(109, 76, 99, 0.28);
+}
+
+.menu-filter__button.is-active {
+  background: $color-primary;
+  color: $color-white;
+  border-color: $color-primary;
+  box-shadow: $shadow-sm;
+}

@@ -1,0 +1,63 @@
+.card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card,
+.menu-item {
+  @include panel;
+  @include interactive-lift;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+.card__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  color: $color-primary;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card__title,
+.menu-item__title {
+  margin-bottom: 0.65rem;
+  font-family: $font-heading;
+  font-size: 1.5rem;
+  color: $color-primary-deep;
+}
+
+.card__text {
+  color: $color-text-muted;
+}
+
+.card__media {
+  margin: -1.5rem -1.5rem 1.2rem;
+  overflow: hidden;
+}
+
+.card__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-card__caption {
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 Años | Menú de Tragos</title>
+  <meta name="description" content="Menú de tragos de la celebración de 50 años con opciones signature, clásicos y sin alcohol.">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-brand" aria-label="Ir al inicio de 50 Años">50 Años</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="site-nav__link" href="menu.html">Menú</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Galería</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container">
+        <p class="eyebrow">Carta de la noche</p>
+        <h1>Menú de tragos</h1>
+        <p>
+          Una selección creada para brindar por los recuerdos, la familia y los nuevos
+          momentos que todavía quedan por vivir.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Elegí tu estilo</h2>
+        <div class="menu-filter" role="group" aria-label="Filtrar tragos por categoría">
+          <button class="menu-filter__button is-active" type="button" data-category="all">Todos</button>
+          <button class="menu-filter__button" type="button" data-category="signature">Signature</button>
+          <button class="menu-filter__button" type="button" data-category="classics">Clásicos</button>
+          <button class="menu-filter__button" type="button" data-category="sin-alcohol">Sin alcohol</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-group" aria-labelledby="tragos-destacados">
+      <div class="container">
+        <h2 class="section-title" id="tragos-destacados">Selección destacada</h2>
+        <div class="card-grid">
+          <article class="card menu-item" data-category="signature">
+            <h3>Brillo Dorado</h3>
+            <p class="menu-item__meta">Espumante · licor de sauco · cítricos</p>
+            <p class="menu-item__description">
+              Refrescante y elegante, pensado para abrir la noche con un brindis delicado.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="signature">
+            <h3>Rosa de Medianoche</h3>
+            <p class="menu-item__meta">Gin · frutos rojos · tónica premium</p>
+            <p class="menu-item__description">
+              Un cóctel floral y sutil, con un color que acompaña la estética de la celebración.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="signature">
+            <h3>50 Sunset</h3>
+            <p class="menu-item__meta">Vodka · durazno · naranja · toque de granadina</p>
+            <p class="menu-item__description">
+              Dulce, brillante y festivo, ideal para quienes buscan un sabor suave y memorable.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-group" aria-labelledby="clasicos-de-siempre">
+      <div class="container">
+        <h2 class="section-title" id="clasicos-de-siempre">Clásicos de siempre</h2>
+        <div class="card-grid">
+          <article class="card menu-item" data-category="classics">
+            <h3>Negroni</h3>
+            <p class="menu-item__meta">Gin · vermut rosso · Campari</p>
+            <p class="menu-item__description">
+              Intenso, equilibrado y atemporal. Un favorito para paladares clásicos.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="classics">
+            <h3>Gin Tonic</h3>
+            <p class="menu-item__meta">Gin · agua tónica · botánicos</p>
+            <p class="menu-item__description">
+              Fresco y aromático, servido con un perfil limpio y elegante.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="classics">
+            <h3>Mojito</h3>
+            <p class="menu-item__meta">Ron · menta · lima · soda</p>
+            <p class="menu-item__description">
+              Refrescante y vibrante, ideal para acompañar el ritmo alegre de la fiesta.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="classics">
+            <h3>Old Fashioned</h3>
+            <p class="menu-item__meta">Whisky · azúcar · bitter</p>
+            <p class="menu-item__description">
+              Sobrio y distinguido, para quienes disfrutan de un cóctel con carácter.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-group" aria-labelledby="opciones-sin-alcohol">
+      <div class="container">
+        <h2 class="section-title" id="opciones-sin-alcohol">Opciones sin alcohol</h2>
+        <div class="card-grid">
+          <article class="card menu-item" data-category="sin-alcohol">
+            <h3>Limonada de la Casa</h3>
+            <p class="menu-item__meta">Limón · menta · almíbar suave · soda</p>
+            <p class="menu-item__description">
+              Un clásico refrescante para disfrutar durante toda la noche.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="sin-alcohol">
+            <h3>Spritz Cero</h3>
+            <p class="menu-item__meta">Naranja · bitter sin alcohol · tónica</p>
+            <p class="menu-item__description">
+              Ligero, cítrico y festivo, con toda la presencia de un aperitivo especial.
+            </p>
+          </article>
+          <article class="card menu-item" data-category="sin-alcohol">
+            <h3>Pomelo & Romero</h3>
+            <p class="menu-item__meta">Pomelo rosado · romero · soda</p>
+            <p class="menu-item__description">
+              Herbal y sofisticado, perfecto para quienes buscan algo diferente.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>50 Años · Brindemos por los recuerdos y por todo lo que viene.</p>
+    </div>
+  </footer>
+</body>
+</html>

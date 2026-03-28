@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 Años | Galería</title>
+  <meta name="description" content="Galería colaborativa de la celebración de 50 años para ver y compartir recuerdos de la noche.">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/upload.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-brand" aria-label="Ir al inicio de 50 Años">50 Años</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="site-nav__link" href="menu.html">Menú</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Galería</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container">
+        <p class="eyebrow">Recuerdos compartidos</p>
+        <h1>Galería de la celebración</h1>
+        <p>
+          Sumá tus mejores fotos de la noche y disfrutá de una colección de momentos
+          que quedarán para siempre.
+        </p>
+        <div class="cta-group">
+          <a class="button" id="upload-link" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Abrir carpeta de carga</a>
+          <button class="button button--secondary" id="copy-upload-link" type="button">Copiar enlace</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Cómo compartir tus fotos</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>1. Abrí el enlace</h3>
+            <p>
+              Ingresá a la carpeta compartida de Google Drive desde el botón de arriba.
+            </p>
+          </article>
+          <article class="card">
+            <h3>2. Subí tus imágenes</h3>
+            <p>
+              Elegí tus fotos favoritas de la noche y cargalas para sumar tu mirada a este recuerdo.
+            </p>
+          </article>
+          <article class="card">
+            <h3>3. Disfrutá la galería</h3>
+            <p>
+              Explorá las imágenes compartidas y reviví cada instante especial de la fiesta.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="galeria-recuerdos">
+      <div class="container">
+        <h2 class="section-title" id="galeria-recuerdos">Momentos de la noche</h2>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-01.jpg" alt="Brindis familiar en la celebración" data-caption="Brindis familiar al comienzo de la noche">
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-02.jpg" alt="Mesa decorada para los 50 años" data-caption="Detalles de la mesa principal y la ambientación">
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-03.jpg" alt="Invitados sonriendo durante la fiesta" data-caption="Sonrisas, abrazos y momentos compartidos">
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-04.jpg" alt="Torta de cumpleaños de 50 años" data-caption="La torta y el gran momento de soplar las velas">
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-05.jpg" alt="Barra de tragos preparada para la celebración" data-caption="La barra lista para acompañar cada brindis">
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/uploads/recuerdo-06.jpg" alt="Grupo de amigos bailando" data-caption="La pista llena de energía y alegría">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Vista ampliada de imagen">
+      <button id="lightbox-close" class="lightbox__close" type="button" aria-label="Cerrar imagen ampliada">&times;</button>
+      <figure class="lightbox__content">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>50 Años · Gracias por compartir cada recuerdo de esta noche inolvidable.</p>
+    </div>
+  </footer>
+</body>
+</html>

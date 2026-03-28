@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  color: $color-text;
+  background:
+    radial-gradient(circle at top, rgba(250, 237, 247, 0.95), rgba(255, 248, 252, 0.98) 42%, $color-background 100%);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+::selection {
+  background: rgba(182, 139, 167, 0.3);
+  color: $color-primary-deep;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+.site-main {
+  overflow: clip;
+}
+
+.section {
+  @include section-spacing;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  font-family: $font-heading;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: $color-primary-deep;
+  letter-spacing: 0.02em;
+}
+
+.section-subtitle,
+.lead {
+  color: $color-text-muted;
+  font-size: 1.05rem;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-active {
+  position: relative;
+}

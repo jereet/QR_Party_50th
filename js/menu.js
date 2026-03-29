@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   var filterButtons = document.querySelectorAll('.menu-filter__button');
   var menuItems = document.querySelectorAll('.menu-item');
+  var menuGroups = document.querySelectorAll('.menu-group');
 
-  if (!filterButtons.length || !menuItems.length) {
+  if (!filterButtons.length || !menuItems.length || !menuGroups.length) {
     return;
   }
 
@@ -20,6 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
       var shouldShow = category === 'all' || itemCategory === category;
 
       item.classList.toggle('is-hidden', !shouldShow);
+    });
+
+    menuGroups.forEach(function (group) {
+      if (category === 'all') {
+        group.classList.remove('is-hidden');
+        return;
+      }
+
+      var hasVisibleItems = group.querySelector('.menu-item[data-category="' + category + '"]');
+      group.classList.toggle('is-hidden', !hasVisibleItems);
     });
   }
 

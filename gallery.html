@@ -38,25 +38,29 @@
           que quedarán para siempre.
         </p>
         <div class="cta-group">
-          <input type="file" accept="image/*" capture="none">
+          <button id="upload_widget">📸 Subir foto</button>
+
+          <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
 
           <script>
-            const input = document.getElementById("fileInput");
+            const myWidget = cloudinary.createUploadWidget({
+              cloudName: 'duns7yexg',
+              uploadPreset: 'FiestaVane50',
+              sources: ['local'],
+              showAdvancedOptions: false,
+            }, (error, result) => {
+              if (error) {
+                console.error(error);
+                return;
+              }
 
-            input.addEventListener("change", async () => {
-              const file = input.files[0];
+              if (result && result.event === "success") {
+                console.log("OK:", result.info.secure_url);
+              }
+            });
 
-              const formData = new FormData();
-              formData.append("file", file);
-              formData.append("upload_preset", "FiestaVane50");
-
-              const res = await fetch("https://api.cloudinary.com/v1_1/duns7yexg/image/upload", {
-                method: "POST",
-                body: formData
-              });
-
-              const data = await res.json();
-              console.log("Subido:", data.secure_url);
+            document.getElementById("upload_widget").addEventListener("click", function(){
+              myWidget.open();
             });
           </script>
           <a class="button" id="upload-link" href="https://drive.google.com/drive/folders/1UL_zRwCJMQXWCBhi6qpK52mptJYGi479?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir carpeta de carga</a>

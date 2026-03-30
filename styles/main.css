@@ -248,10 +248,7 @@ main {
 .button--secondary:focus-visible {
   background: rgba(109, 76, 99, 0.08);
 }
-.button--terciary:hover,
-.button--terciary:focus-visible {
-  background: var(--color-text);
-}
+
 .card-grid,
 .gallery-grid {
   display: grid;

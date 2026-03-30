@@ -38,6 +38,30 @@
           que quedarán para siempre.
         </p>
         <div class="cta-group">
+          <button id="upload_widget">📸 Subir foto</button>
+
+          <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+
+          <script>
+            const myWidget = cloudinary.createUploadWidget({
+              cloudName: 'duns7yexg',
+              uploadPreset: 'FiestaVane50',
+              sources: ['local', 'camera'],
+            }, (error, result) => {
+              if (error) {
+                console.error(error);
+                return;
+              }
+
+              if (result && result.event === "success") {
+                console.log("OK:", result.info.secure_url);
+              }
+            });
+
+            document.getElementById("upload_widget").addEventListener("click", function(){
+              myWidget.open();
+            });
+          </script>
           <a class="button" id="upload-link" href="https://drive.google.com/drive/folders/1UL_zRwCJMQXWCBhi6qpK52mptJYGi479?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir carpeta de carga</a>
           <button class="button button--secondary" id="copy-upload-link" type="button">Copiar enlace</button>
         </div>

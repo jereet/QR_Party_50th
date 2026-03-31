@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   var navLinks = document.querySelectorAll('.site-nav__link');
 
+  
   navLinks.forEach(function (link) {
     var href = link.getAttribute('href');
 
